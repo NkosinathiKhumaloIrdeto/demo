@@ -4,7 +4,7 @@ var app = express();
 app.listen(8089);
 app.get('/',(req,res)=>{
 
-res.send('Hellow World');
+res.send('Hello World');
 
 });
 console.log("app running on http://localhost:8089");
