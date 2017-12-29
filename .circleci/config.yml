@@ -6,11 +6,11 @@ jobs:
       -image: docker:17.0.50-ce-git
     steps:
       - checkout
-      - setups_remote_docker
+      - setup_remote_docker
       - run:
           name: Install dependencies
       - run:
           name: Run tests
           command: 
-            docker-compose up -dependencie
+            docker-compose up -d
             docker-compose run dockerskop npm test
