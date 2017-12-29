@@ -22,6 +22,6 @@ jobs:
           name: Push app to docker image
           command: |
             #docker login -e $DOCKER_HUB_EMAIL -u $DOCKER_HUB_USER_ID -p $DOCKER_HUB_PWD
-            docker tag app_dockerapp $DOCKER_HUB_USER_ID/nodeapp:$CIRCLE_SHA1
-            docker tag app_dockerapp $DOCKER_HUB_USER_ID/nodeapp:latest
+            docker tag nodeapp $DOCKER_HUB_USER_ID/nodeapp:$CIRCLE_SHA1
+            docker tag nodeapp $DOCKER_HUB_USER_ID/nodeapp:latest
             docker push $DOCKER_HUB_USER_ID/nodeapp:$CIRCLE_SHA1
