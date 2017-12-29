@@ -5,4 +5,4 @@ services:
     ports: 
       - "8089:8089"
   nodeapp:
-    image: nodeapp:v1.0
+    image: nathik/nodeapp:v1.0
