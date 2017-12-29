@@ -12,11 +12,11 @@ jobs:
           command: |
             apk add --no-cache py-pip=9.0.0-r1
             pip install docker-compose==1.18.0
+
       - run:
           name: Run tests
           command: 
-            docker-compose up -d
-            docker-compose run dockerapp npm test
+            docker-compose up -d && docker-compose run dockerapp npm test
       - deploy:
           name: Push app to docker image
           command: |
