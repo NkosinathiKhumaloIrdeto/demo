@@ -16,7 +16,8 @@ jobs:
       - run:
           name: Run tests
           command: 
-            docker-compose up -d && docker-compose run dockerapp npm test
+            docker-compose up -d 
+            docker-compose run dockerapp npm test
       - deploy:
           name: Push app to docker image
           command: |
